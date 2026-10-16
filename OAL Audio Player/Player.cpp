@@ -235,17 +235,17 @@ int VolumeChange(int _value)
 	return 1;
 }
 
-double GetTotalTime()
+int GetTotalTime()
 {
 	ALint size;
 	ALint frequency;
 	ALint bits;
 	ALint channels;
 
-	alGetBufferi(dataOAL.uiSource, AL_SIZE, &size);
-	alGetBufferi(dataOAL.uiSource, AL_FREQUENCY, &frequency);
-	alGetBufferi(dataOAL.uiSource, AL_BITS, &bits);
-	alGetBufferi(dataOAL.uiSource, AL_CHANNELS, &channels);
+	alGetBufferi(dataOAL.uiBuffer, AL_SIZE, &size);
+	alGetBufferi(dataOAL.uiBuffer, AL_FREQUENCY, &frequency);
+	alGetBufferi(dataOAL.uiBuffer, AL_BITS, &bits);
+	alGetBufferi(dataOAL.uiBuffer, AL_CHANNELS, &channels);
 
 	double durationSeconds = static_cast<double>(size) / (frequency * channels * (bits / 8));
 

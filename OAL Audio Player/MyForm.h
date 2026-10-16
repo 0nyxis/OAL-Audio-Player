@@ -257,7 +257,6 @@ namespace OALAudioPlayer {
 			this->timePlayingTrackbar->Name = L"timePlayingTrackbar";
 			this->timePlayingTrackbar->Size = System::Drawing::Size(257, 45);
 			this->timePlayingTrackbar->TabIndex = 9;
-			this->timePlayingTrackbar->Value = 100;
 			// 
 			// TotalTimeLabel
 			// 
@@ -285,7 +284,6 @@ namespace OALAudioPlayer {
 			this->label3->Size = System::Drawing::Size(12, 13);
 			this->label3->TabIndex = 12;
 			this->label3->Text = L"/";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -394,14 +392,17 @@ namespace OALAudioPlayer {
 
 			this->SongPlayingLabel->Text = title; 
 
-			TotalTimeLabel->Text = System::TimeSpan::FromMilliseconds(GetTotalTime()).ToString("m\\:ss");
-
 			SetFileType(text);
 
 			if (Play(text.c_str()))
 			{
 				MessageBox::Show("Impossible to read this audio file.");
 			}
+
+			int time = GetTotalTime();
+			TotalTimeLabel->Text = msclr::interop::marshal_as<String^>(std::to_string(time / 60) + ":" + std::to_string(time % 60));
+			timePlayingTrackbar->Maximum = time;
+			timePlayingTrackbar->Value = 0;
 		}
 		else
 		{

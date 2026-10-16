@@ -22,6 +22,6 @@ int Play(const char* fileName);
 int Stop();
 int init();
 int ResumePause();
-double GetTotalTime();
+int GetTotalTime();
 int VolumeChange(int _value);
 void SetFileType(std::string string);
