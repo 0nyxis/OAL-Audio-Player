@@ -49,13 +49,13 @@ int init()
 {
 	ALFWInit();
 	
-	InitVorbisFile();
-	if (!g_bVorbisInit)
-	{
-		ALFWprintf("Failed to find OggVorbis DLLs (vorbisfile.dll, ogg.dll, or vorbis.dll)\n");
-		ALFWShutdown();
-		return 0;
-	}
+	//InitVorbisFile();
+	//if (!g_bVorbisInit)
+	//{
+	//	ALFWprintf("Failed to find OggVorbis DLLs (vorbisfile.dll, ogg.dll, or vorbis.dll)\n");
+	//	ALFWShutdown();
+	//	return 0;
+	//}
 
 	// Initialize Framework
 	if (!ALFWInitOpenAL())

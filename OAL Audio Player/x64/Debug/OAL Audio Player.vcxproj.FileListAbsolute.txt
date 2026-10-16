@@ -4,3 +4,6 @@ D:\SVN\Eleves\sdouyere\Tools\Windows Form Sound\OAL Audio Player\OAL Audio Playe
 C:\Users\louis\Documents\GitHub\OAL-Audio-Player\OAL Audio Player\x64\Debug\OAL Audio Player.vcxproj.AssemblyReference.cache
 C:\Users\louis\Documents\GitHub\OAL-Audio-Player\OAL Audio Player\x64\Debug\OALAudioPlayer.MyForm.resources
 C:\Users\louis\Documents\GitHub\OAL-Audio-Player\OAL Audio Player\x64\Debug\OAL Audio Player.vcxproj.GenerateResource.cache
+E:\SVN\Year4\sdouyere\Tools\Windows Form Sound\OAL Audio Player\OAL Audio Player\x64\Debug\OAL Audio Player.vcxproj.AssemblyReference.cache
+E:\SVN\Year4\sdouyere\Tools\Windows Form Sound\OAL Audio Player\OAL Audio Player\x64\Debug\OALAudioPlayer.MyForm.resources
+E:\SVN\Year4\sdouyere\Tools\Windows Form Sound\OAL Audio Player\OAL Audio Player\x64\Debug\OAL Audio Player.vcxproj.GenerateResource.cache
