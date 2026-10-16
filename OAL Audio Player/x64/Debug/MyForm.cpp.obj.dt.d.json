@@ -1,0 +1,12 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\myform.cpp",
+        "ProvidedModule": "",
+        "Includes": [
+            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\myform.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

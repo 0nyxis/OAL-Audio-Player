@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Debug\\vorbisfile.obj",
+            "outputs": [
+                "Debug\\vorbisfile.h.obj.dt.module.json",
+                "Debug\\vorbisfile.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

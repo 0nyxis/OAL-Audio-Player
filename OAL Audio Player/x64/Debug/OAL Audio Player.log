@@ -1,0 +1,8 @@
+﻿  MyForm.cpp
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  aldlist.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
+Framework.obj : warning LNK4248: jeton typeref non résolu (0100001F) pour 'ALCdevice_struct' ; l'image risque de ne pas s'exécuter
+aldlist.obj : warning LNK4248: jeton typeref non résolu (0100001A) pour 'ALCdevice_struct' ; l'image risque de ne pas s'exécuter
+Framework.obj : warning LNK4248: jeton typeref non résolu (01000023) pour 'ALCcontext_struct' ; l'image risque de ne pas s'exécuter
+aldlist.obj : warning LNK4248: jeton typeref non résolu (01000020) pour 'ALCcontext_struct' ; l'image risque de ne pas s'exécuter
+  OAL Audio Player.vcxproj -> D:\SVN\Eleves\sdouyere\Tools\Windows Form Sound\OAL Audio Player\x64\Debug\OAL Audio Player.exe

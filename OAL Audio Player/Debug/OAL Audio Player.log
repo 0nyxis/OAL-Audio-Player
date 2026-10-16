@@ -1,0 +1,8 @@
+﻿  Player.cpp
+D:\SVN\Eleves\sdouyere\Tools\Windows Form Sound\OAL Audio Player\OAL Audio Player\Player.cpp(65,1): warning C4715: 'init' : les chemins de contrôle ne retournent pas tous une valeur
+  aldlist.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
+Framework.obj : warning LNK4248: jeton typeref non résolu (0100001F) pour 'ALCdevice_struct' ; l'image risque de ne pas s'exécuter
+aldlist.obj : warning LNK4248: jeton typeref non résolu (0100001B) pour 'ALCdevice_struct' ; l'image risque de ne pas s'exécuter
+Framework.obj : warning LNK4248: jeton typeref non résolu (0100001E) pour 'ALCcontext_struct' ; l'image risque de ne pas s'exécuter
+aldlist.obj : warning LNK4248: jeton typeref non résolu (0100001C) pour 'ALCcontext_struct' ; l'image risque de ne pas s'exécuter
+  OAL Audio Player.vcxproj -> D:\SVN\Eleves\sdouyere\Tools\Windows Form Sound\OAL Audio Player\Debug\OAL Audio Player.exe

@@ -1,0 +1,27 @@
+#pragma once
+#include "Framework.h"
+
+enum FileType
+{
+	WAV,
+	OGG,
+};
+
+struct OALData
+{
+	ALuint      uiBuffer;
+	ALuint      uiSource;
+	ALint       uiState;
+
+	FileType filetype = FileType::WAV;
+
+	float       volume = 1.0f;
+};
+
+int Play(const char* fileName);
+int Stop();
+int init();
+int ResumePause();
+double GetTotalTime();
+int VolumeChange(int _value);
+void SetFileType(std::string string);

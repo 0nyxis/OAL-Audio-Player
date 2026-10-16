@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Debug\\MyForm.obj",
+            "outputs": [
+                "Debug\\MyForm.h.obj.dt.module.json",
+                "Debug\\MyForm.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

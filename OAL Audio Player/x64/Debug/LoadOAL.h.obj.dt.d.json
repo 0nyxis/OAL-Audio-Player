@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\framework\\win32\\loadoal.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\al.h",
+            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\alc.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
