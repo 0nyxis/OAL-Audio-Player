@@ -402,7 +402,7 @@ namespace OALAudioPlayer {
 			int time = GetTotalTime();
 			TotalTimeLabel->Text = msclr::interop::marshal_as<String^>(std::to_string(time / 60) + ":" + std::to_string(time % 60));
 			timePlayingTrackbar->Maximum = time;
-			timePlayingTrackbar->Value = 0;
+			//timePlayingTrackbar->Value = 0;
 		}
 		else
 		{
