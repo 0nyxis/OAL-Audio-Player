@@ -1,7 +1,7 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\vorbis\\vorbisfile.h",
+        "Source": "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\packages\\imesense.packages.libvorbis.1.3.7.5\\native\\include\\vorbis\\vorbisfile.h",
         "ProvidedModule": "",
         "Includes": [
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\stdio.h",
@@ -12,9 +12,11 @@
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vadefs.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt_wstdio.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt_stdio_config.h",
-            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\vorbis\\codec.h",
-            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\ogg\\ogg.h",
-            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\ogg\\os_types.h"
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\packages\\imesense.packages.libvorbis.1.3.7.5\\native\\include\\vorbis\\codec.h",
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\packages\\imesense.packages.libogg.1.3.5.5\\native\\include\\ogg\\ogg.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\stddef.h",
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\packages\\imesense.packages.libogg.1.3.5.5\\native\\include\\ogg\\os_types.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\stdint.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -1,6 +1,6 @@
 ﻿  Player.cpp
-E:\SVN\Year4\sdouyere\Tools\Windows Form Sound\OAL Audio Player\OAL Audio Player\Player.cpp(252,9): warning C4244: 'return' : conversion de 'double' en 'int', perte possible de données
-E:\SVN\Year4\sdouyere\Tools\Windows Form Sound\OAL Audio Player\OAL Audio Player\Player.cpp(66,1): warning C4715: 'init' : les chemins de contrôle ne retournent pas tous une valeur
+E:\SVN\Year4\sdouyere\Tools\Windows Form Sound\OAL Audio Player\OAL Audio Player\Player.cpp(207,9): warning C4244: 'return' : conversion de 'double' en 'int', perte possible de données
+E:\SVN\Year4\sdouyere\Tools\Windows Form Sound\OAL Audio Player\OAL Audio Player\Player.cpp(65,1): warning C4715: 'init' : les chemins de contrôle ne retournent pas tous une valeur
   aldlist.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
 Framework.obj : warning LNK4248: jeton typeref non résolu (0100001F) pour 'ALCdevice_struct' ; l'image risque de ne pas s'exécuter
 aldlist.obj : warning LNK4248: jeton typeref non résolu (0100001B) pour 'ALCdevice_struct' ; l'image risque de ne pas s'exécuter

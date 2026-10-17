@@ -1,5 +1,6 @@
 #pragma once
 #include "Framework.h"
+#include <vorbis/vorbisfile.h>
 
 enum FileType
 {

@@ -407,17 +407,20 @@ namespace OALAudioPlayer {
 
 			if (Play(text.c_str()))
 			{
-				MessageBox::Show("Impossible to read this audio file.");
+				PlaybackTimer->Start();
 			}
 			else
 			{
-				PlaybackTimer->Start();
+				MessageBox::Show("Impossible to read this audio file.");
 			}
 
 			int time = GetTotalTime();
-			TotalTimeLabel->Text = msclr::interop::marshal_as<String^>(std::to_string(time / 60) + ":" + std::to_string(time % 60));
-			timePlayingTrackbar->Maximum = time;
-			timePlayingTrackbar->Value = 0;
+			if (time > 0)
+			{
+				TotalTimeLabel->Text = msclr::interop::marshal_as<String^>(std::to_string(time / 60) + ":" + std::to_string(time % 60));
+				timePlayingTrackbar->Maximum = time;
+				timePlayingTrackbar->Value = 0;
+			}
 		}
 		else
 		{
@@ -444,10 +447,12 @@ namespace OALAudioPlayer {
 	private: System::Void PlaybackTimer_Tick(System::Object^ sender, System::EventArgs^ e) 
 	{
 		int time = GetCurrentPlayTime();
-
-		CurrentTimeLabel->Text = String::Format("{0:D2}:{1:D2}", time/60, time % 60);
-
-		timePlayingTrackbar->Value = time;
+		
+		if (time > 0)
+		{
+			CurrentTimeLabel->Text = String::Format("{0:D2}:{1:D2}", time / 60, time % 60);
+			timePlayingTrackbar->Value = time;
+		}
 	}
 
 	private: System::Void PlayerChangingCurrentTimer(System::Object^ sender, System::EventArgs^ e) 

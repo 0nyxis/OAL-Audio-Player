@@ -1,7 +1,7 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\framework\\win32\\framework.h",
+        "Source": "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\framework\\win32\\framework.h",
         "ProvidedModule": "",
         "Includes": [
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\windows.h",
@@ -247,11 +247,11 @@
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\fcntl.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\conio.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt_wconio.h",
-            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\al.h",
-            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\alc.h",
-            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\efx.h",
-            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\efx-creative.h",
-            "d:\\svn\\eleves\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\xram.h",
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\al.h",
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\alc.h",
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\efx.h",
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\efx-creative.h",
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\xram.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\iostream",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\yvals_core.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\xkeycheck.h",

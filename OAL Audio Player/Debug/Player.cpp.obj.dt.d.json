@@ -335,11 +335,13 @@
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\clocale",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\locale.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\ostream",
-            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\vorbis\\vorbisfile.h",
-            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\vorbis\\codec.h",
-            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\ogg\\ogg.h",
-            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\oal audio player\\include\\ogg\\os_types.h",
-            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\tchar.h"
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\packages\\imesense.packages.libvorbis.1.3.7.5\\native\\include\\vorbis\\vorbisfile.h",
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\packages\\imesense.packages.libvorbis.1.3.7.5\\native\\include\\vorbis\\codec.h",
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\packages\\imesense.packages.libogg.1.3.5.5\\native\\include\\ogg\\ogg.h",
+            "e:\\svn\\year4\\sdouyere\\tools\\windows form sound\\oal audio player\\packages\\imesense.packages.libogg.1.3.5.5\\native\\include\\ogg\\os_types.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\tchar.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vector",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\__msvc_bit_utils.hpp"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
