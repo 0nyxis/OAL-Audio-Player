@@ -68,6 +68,8 @@ namespace OALAudioPlayer {
 	private: System::Windows::Forms::Label^ CurrentTimeLabel;
 
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Timer^ PlaybackTimer;
+	private: System::ComponentModel::IContainer^ components;
 
 
 
@@ -83,7 +85,7 @@ namespace OALAudioPlayer {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -92,6 +94,7 @@ namespace OALAudioPlayer {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->ResumePauseButton = (gcnew System::Windows::Forms::Button());
 			this->StopButton = (gcnew System::Windows::Forms::Button());
 			this->PlayButton = (gcnew System::Windows::Forms::Button());
@@ -112,6 +115,7 @@ namespace OALAudioPlayer {
 			this->TotalTimeLabel = (gcnew System::Windows::Forms::Label());
 			this->CurrentTimeLabel = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->PlaybackTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->menuStrip1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->VolumeTrackbar))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->timePlayingTrackbar))->BeginInit();
@@ -257,6 +261,7 @@ namespace OALAudioPlayer {
 			this->timePlayingTrackbar->Name = L"timePlayingTrackbar";
 			this->timePlayingTrackbar->Size = System::Drawing::Size(257, 45);
 			this->timePlayingTrackbar->TabIndex = 9;
+			this->timePlayingTrackbar->Scroll += gcnew System::EventHandler(this, &MyForm::PlayerChangingCurrentTimer);
 			// 
 			// TotalTimeLabel
 			// 
@@ -284,6 +289,12 @@ namespace OALAudioPlayer {
 			this->label3->Size = System::Drawing::Size(12, 13);
 			this->label3->TabIndex = 12;
 			this->label3->Text = L"/";
+			// 
+			// PlaybackTimer
+			// 
+			this->PlaybackTimer->Interval = 500;
+			this->PlaybackTimer->Tick += gcnew System::EventHandler(this, &MyForm::PlaybackTimer_Tick);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -398,11 +409,15 @@ namespace OALAudioPlayer {
 			{
 				MessageBox::Show("Impossible to read this audio file.");
 			}
+			else
+			{
+				PlaybackTimer->Start();
+			}
 
 			int time = GetTotalTime();
 			TotalTimeLabel->Text = msclr::interop::marshal_as<String^>(std::to_string(time / 60) + ":" + std::to_string(time % 60));
 			timePlayingTrackbar->Maximum = time;
-			//timePlayingTrackbar->Value = 0;
+			timePlayingTrackbar->Value = 0;
 		}
 		else
 		{
@@ -412,16 +427,32 @@ namespace OALAudioPlayer {
 	private: System::Void StopButton_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		Stop();
+		PlaybackTimer->Stop();
 	}
 	private: System::Void ResumePauseButton_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		ResumePause();
+		int result = ResumePause();
+
+		result == 1 ? PlaybackTimer->Stop() : PlaybackTimer->Start();
 	}
 
 	private: System::Void VolumeChanged(System::Object^ sender, System::EventArgs^ e) 
 	{
-
 		VolumeChange(VolumeTrackbar->Value);
+	}
+
+	private: System::Void PlaybackTimer_Tick(System::Object^ sender, System::EventArgs^ e) 
+	{
+		int time = GetCurrentPlayTime();
+
+		CurrentTimeLabel->Text = String::Format("{0:D2}:{1:D2}", time/60, time % 60);
+
+		timePlayingTrackbar->Value = time;
+	}
+
+	private: System::Void PlayerChangingCurrentTimer(System::Object^ sender, System::EventArgs^ e) 
+	{
+		SetCurrentTime(timePlayingTrackbar->Value);
 	}
 };
 }

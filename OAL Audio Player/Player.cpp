@@ -223,9 +223,9 @@ int ResumePause()
 	{
 		alSourcePlay(dataOAL.uiSource);
 		alGetSourcei(dataOAL.uiSource, AL_SOURCE_STATE, &dataOAL.uiState);
-		return 1;
+		return 2;
 	}
-	return 0;
+	return -1;
 }
 
 int VolumeChange(int _value)
@@ -251,6 +251,22 @@ int GetTotalTime()
 
 	return durationSeconds;
 }
+
+int GetCurrentPlayTime()
+{
+	ALfloat seconds = 0.0f;
+
+	alGetSourcef(dataOAL.uiSource, AL_SEC_OFFSET, &seconds);
+
+	return static_cast<int>(seconds);
+}
+
+void SetCurrentTime(float seconds)
+{
+	alSourcef(dataOAL.uiSource, AL_SEC_OFFSET, seconds);
+}
+
+
 
 void SetFileType(std::string string)
 {
