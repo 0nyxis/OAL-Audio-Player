@@ -95,6 +95,7 @@ namespace OALAudioPlayer {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->ResumePauseButton = (gcnew System::Windows::Forms::Button());
 			this->StopButton = (gcnew System::Windows::Forms::Button());
 			this->PlayButton = (gcnew System::Windows::Forms::Button());
@@ -124,9 +125,10 @@ namespace OALAudioPlayer {
 			// ResumePauseButton
 			// 
 			this->ResumePauseButton->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
-			this->ResumePauseButton->Location = System::Drawing::Point(557, 261);
+			this->ResumePauseButton->Location = System::Drawing::Point(743, 321);
+			this->ResumePauseButton->Margin = System::Windows::Forms::Padding(4);
 			this->ResumePauseButton->Name = L"ResumePauseButton";
-			this->ResumePauseButton->Size = System::Drawing::Size(98, 27);
+			this->ResumePauseButton->Size = System::Drawing::Size(131, 33);
 			this->ResumePauseButton->TabIndex = 0;
 			this->ResumePauseButton->Text = L"Resume/Pause";
 			this->ResumePauseButton->UseVisualStyleBackColor = true;
@@ -135,9 +137,10 @@ namespace OALAudioPlayer {
 			// StopButton
 			// 
 			this->StopButton->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
-			this->StopButton->Location = System::Drawing::Point(661, 261);
+			this->StopButton->Location = System::Drawing::Point(881, 321);
+			this->StopButton->Margin = System::Windows::Forms::Padding(4);
 			this->StopButton->Name = L"StopButton";
-			this->StopButton->Size = System::Drawing::Size(75, 27);
+			this->StopButton->Size = System::Drawing::Size(100, 33);
 			this->StopButton->TabIndex = 1;
 			this->StopButton->Text = L"Stop";
 			this->StopButton->UseVisualStyleBackColor = true;
@@ -146,9 +149,10 @@ namespace OALAudioPlayer {
 			// PlayButton
 			// 
 			this->PlayButton->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
-			this->PlayButton->Location = System::Drawing::Point(476, 261);
+			this->PlayButton->Location = System::Drawing::Point(635, 321);
+			this->PlayButton->Margin = System::Windows::Forms::Padding(4);
 			this->PlayButton->Name = L"PlayButton";
-			this->PlayButton->Size = System::Drawing::Size(75, 27);
+			this->PlayButton->Size = System::Drawing::Size(100, 33);
 			this->PlayButton->TabIndex = 2;
 			this->PlayButton->Text = L"Play";
 			this->PlayButton->UseVisualStyleBackColor = true;
@@ -157,17 +161,20 @@ namespace OALAudioPlayer {
 			// listBox1
 			// 
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->Location = System::Drawing::Point(12, 24);
+			this->listBox1->ItemHeight = 16;
+			this->listBox1->Location = System::Drawing::Point(16, 30);
+			this->listBox1->Margin = System::Windows::Forms::Padding(4);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(391, 329);
+			this->listBox1->Size = System::Drawing::Size(520, 404);
 			this->listBox1->TabIndex = 3;
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->fileButton });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(819, 24);
+			this->menuStrip1->Size = System::Drawing::Size(1092, 30);
 			this->menuStrip1->TabIndex = 4;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -178,35 +185,35 @@ namespace OALAudioPlayer {
 					this->openListToolStripMenuItem, this->saveButton, this->exitButton
 			});
 			this->fileButton->Name = L"fileButton";
-			this->fileButton->Size = System::Drawing::Size(37, 20);
+			this->fileButton->Size = System::Drawing::Size(46, 24);
 			this->fileButton->Text = L"File";
 			this->fileButton->Click += gcnew System::EventHandler(this, &MyForm::toolStripMenuItem1_Click);
 			// 
 			// openButton
 			// 
 			this->openButton->Name = L"openButton";
-			this->openButton->Size = System::Drawing::Size(121, 22);
+			this->openButton->Size = System::Drawing::Size(151, 26);
 			this->openButton->Text = L"Open";
 			this->openButton->Click += gcnew System::EventHandler(this, &MyForm::openButton_Click);
 			// 
 			// openListToolStripMenuItem
 			// 
 			this->openListToolStripMenuItem->Name = L"openListToolStripMenuItem";
-			this->openListToolStripMenuItem->Size = System::Drawing::Size(121, 22);
+			this->openListToolStripMenuItem->Size = System::Drawing::Size(151, 26);
 			this->openListToolStripMenuItem->Text = L"Open list";
 			this->openListToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::openListToolStripMenuItem_Click);
 			// 
 			// saveButton
 			// 
 			this->saveButton->Name = L"saveButton";
-			this->saveButton->Size = System::Drawing::Size(121, 22);
+			this->saveButton->Size = System::Drawing::Size(151, 26);
 			this->saveButton->Text = L"Save";
 			this->saveButton->Click += gcnew System::EventHandler(this, &MyForm::saveButton_Click);
 			// 
 			// exitButton
 			// 
 			this->exitButton->Name = L"exitButton";
-			this->exitButton->Size = System::Drawing::Size(121, 22);
+			this->exitButton->Size = System::Drawing::Size(151, 26);
 			this->exitButton->Text = L"Exit";
 			this->exitButton->Click += gcnew System::EventHandler(this, &MyForm::exitButton_Click);
 			// 
@@ -216,10 +223,11 @@ namespace OALAudioPlayer {
 			// 
 			// VolumeTrackbar
 			// 
-			this->VolumeTrackbar->Location = System::Drawing::Point(542, 308);
+			this->VolumeTrackbar->Location = System::Drawing::Point(723, 379);
+			this->VolumeTrackbar->Margin = System::Windows::Forms::Padding(4);
 			this->VolumeTrackbar->Maximum = 100;
 			this->VolumeTrackbar->Name = L"VolumeTrackbar";
-			this->VolumeTrackbar->Size = System::Drawing::Size(163, 45);
+			this->VolumeTrackbar->Size = System::Drawing::Size(217, 56);
 			this->VolumeTrackbar->TabIndex = 5;
 			this->VolumeTrackbar->Value = 100;
 			this->VolumeTrackbar->ValueChanged += gcnew System::EventHandler(this, &MyForm::VolumeChanged);
@@ -227,18 +235,20 @@ namespace OALAudioPlayer {
 			// VolumeLabel
 			// 
 			this->VolumeLabel->AutoSize = true;
-			this->VolumeLabel->Location = System::Drawing::Point(494, 317);
+			this->VolumeLabel->Location = System::Drawing::Point(659, 390);
+			this->VolumeLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->VolumeLabel->Name = L"VolumeLabel";
-			this->VolumeLabel->Size = System::Drawing::Size(42, 13);
+			this->VolumeLabel->Size = System::Drawing::Size(53, 16);
 			this->VolumeLabel->TabIndex = 6;
 			this->VolumeLabel->Text = L"Volume";
 			// 
 			// CurrentLabel
 			// 
 			this->CurrentLabel->AutoSize = true;
-			this->CurrentLabel->Location = System::Drawing::Point(564, 70);
+			this->CurrentLabel->Location = System::Drawing::Point(752, 86);
+			this->CurrentLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->CurrentLabel->Name = L"CurrentLabel";
-			this->CurrentLabel->Size = System::Drawing::Size(91, 13);
+			this->CurrentLabel->Size = System::Drawing::Size(113, 16);
 			this->CurrentLabel->TabIndex = 7;
 			this->CurrentLabel->Text = L"Currently Playing :";
 			// 
@@ -247,46 +257,51 @@ namespace OALAudioPlayer {
 			this->SongPlayingLabel->AutoSize = true;
 			this->SongPlayingLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->SongPlayingLabel->Location = System::Drawing::Point(441, 98);
-			this->SongPlayingLabel->MaximumSize = System::Drawing::Size(330, 0);
+			this->SongPlayingLabel->Location = System::Drawing::Point(588, 121);
+			this->SongPlayingLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->SongPlayingLabel->MaximumSize = System::Drawing::Size(440, 0);
 			this->SongPlayingLabel->Name = L"SongPlayingLabel";
-			this->SongPlayingLabel->Size = System::Drawing::Size(160, 20);
+			this->SongPlayingLabel->Size = System::Drawing::Size(197, 25);
 			this->SongPlayingLabel->TabIndex = 8;
 			this->SongPlayingLabel->Text = L"No audio file selected";
 			// 
 			// timePlayingTrackbar
 			// 
-			this->timePlayingTrackbar->Location = System::Drawing::Point(512, 198);
+			this->timePlayingTrackbar->Location = System::Drawing::Point(683, 244);
+			this->timePlayingTrackbar->Margin = System::Windows::Forms::Padding(4);
 			this->timePlayingTrackbar->Maximum = 100;
 			this->timePlayingTrackbar->Name = L"timePlayingTrackbar";
-			this->timePlayingTrackbar->Size = System::Drawing::Size(257, 45);
+			this->timePlayingTrackbar->Size = System::Drawing::Size(343, 56);
 			this->timePlayingTrackbar->TabIndex = 9;
 			this->timePlayingTrackbar->Scroll += gcnew System::EventHandler(this, &MyForm::PlayerChangingCurrentTimer);
 			// 
 			// TotalTimeLabel
 			// 
 			this->TotalTimeLabel->AutoSize = true;
-			this->TotalTimeLabel->Location = System::Drawing::Point(472, 213);
+			this->TotalTimeLabel->Location = System::Drawing::Point(629, 262);
+			this->TotalTimeLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->TotalTimeLabel->Name = L"TotalTimeLabel";
-			this->TotalTimeLabel->Size = System::Drawing::Size(34, 13);
+			this->TotalTimeLabel->Size = System::Drawing::Size(38, 16);
 			this->TotalTimeLabel->TabIndex = 10;
 			this->TotalTimeLabel->Text = L"00:00";
 			// 
 			// CurrentTimeLabel
 			// 
 			this->CurrentTimeLabel->AutoSize = true;
-			this->CurrentTimeLabel->Location = System::Drawing::Point(414, 213);
+			this->CurrentTimeLabel->Location = System::Drawing::Point(552, 262);
+			this->CurrentTimeLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->CurrentTimeLabel->Name = L"CurrentTimeLabel";
-			this->CurrentTimeLabel->Size = System::Drawing::Size(34, 13);
+			this->CurrentTimeLabel->Size = System::Drawing::Size(38, 16);
 			this->CurrentTimeLabel->TabIndex = 11;
 			this->CurrentTimeLabel->Text = L"00:00";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(454, 213);
+			this->label3->Location = System::Drawing::Point(605, 262);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(12, 13);
+			this->label3->Size = System::Drawing::Size(11, 16);
 			this->label3->TabIndex = 12;
 			this->label3->Text = L"/";
 			// 
@@ -297,9 +312,9 @@ namespace OALAudioPlayer {
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(819, 367);
+			this->ClientSize = System::Drawing::Size(1092, 452);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->CurrentTimeLabel);
 			this->Controls->Add(this->TotalTimeLabel);
@@ -313,8 +328,13 @@ namespace OALAudioPlayer {
 			this->Controls->Add(this->StopButton);
 			this->Controls->Add(this->ResumePauseButton);
 			this->Controls->Add(this->menuStrip1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
+			this->Margin = System::Windows::Forms::Padding(4);
+			this->MaximizeBox = false;
 			this->Name = L"MyForm";
+			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Hide;
 			this->Text = L"OAL Audio Player";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->menuStrip1->ResumeLayout(false);
