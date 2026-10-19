@@ -13,3 +13,5 @@ Finally, the current timestamp of the music as well as the total time of the cur
 -------------------------------------------------------------------------
 
 To start the application, click on Release, and download the source code. Then, when you extract it, you can find the exe file in OAL-Audio-Player-Release > Debug > OAL Audio Player.exe
+
+You will require to install OpenAL in order for this app to work. Link : https://www.openal.org/downloads/
